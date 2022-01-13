@@ -1,0 +1,201 @@
+/* ======= GLOBAL ============ */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    }
+
+:root {
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+     /* === TEXT COLORS ==== */
+    --very-dark-blue: hsl(234, 12%, 34%);
+    --grayish-blue: hsl(229, 6%, 66%);
+    --very-light-gray: hsl(0, 0%, 98%);
+}
+
+body {
+    background-color: var(--very-light-gray);
+    height: 100vh;
+}
+
+/* ======== HEADER / INTRO  =========== */
+header {
+    color: var(--very-dark-blue);
+    text-align: center;
+    margin: 0 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.container{   /* for all */
+    width: 80%;
+    margin: auto;
+}
+
+header h1 {
+    font-weight: 200;
+    font-size: 2rem;
+    margin-top: 20px;
+}
+
+header h2 {
+    font-weight: 600;
+    font-size: 1.9rem;
+}
+
+header p {
+    color: var(--grayish-blue);
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+
+
+/* ======= LAYOUT ======= */
+.cards {
+    gap: 30px;
+    display: grid;
+    justify-self: center;
+    grid-template-areas: 
+    "... one ..."
+    "two one four"
+    "two three four"
+    "... three ...";
+}
+
+/* ======= TEAM BUILDER CARD =======*/
+.team-builder-card {
+    padding: 25px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    color: var(--very-dark-blue);
+    border-radius: 5px;
+    box-shadow: 0 5px 20px 1px lightgray;
+    border-top: 5px solid var(--red);
+    grid-area: one;
+}
+
+.team-builder-card p {
+    margin-top: 5px;
+    margin-bottom: 13%;
+    color: var(--grayish-blue);
+}
+
+.team-builder-card img {
+    width: 20%;
+    display: flex;
+    align-self: flex-end;
+}
+
+/* ========== SUPERVISOR CARD ==========*/
+.supervisor-card {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    color: var(--very-dark-blue);
+    border-radius: 5px;
+    box-shadow: 0 5px 20px 1px lightgray;
+    border-top: 5px solid var(--cyan);
+    grid-area: two;
+}
+
+.supervisor-card p {
+    margin-top: 5px;
+    margin-bottom: 13%;
+    color: var(--grayish-blue);
+}
+
+.supervisor-card img {
+    width: 20%;
+    display: flex;
+    align-self: flex-end;
+}
+
+
+ /* ========== KARMA CARD ========== */
+.karma-card {
+    padding: 25px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    color: var(--very-dark-blue);
+    border-radius: 5px;
+    box-shadow: 0 5px 20px 1px lightgray;
+    border-top: 5px solid var(--orange);
+    grid-area: three;
+}
+
+.karma-card p {
+    margin-top: 5px;
+    margin-bottom: 13%;
+    color: var(--grayish-blue);
+}
+
+.karma-card img {
+    width: 20%;
+    display: flex;
+    align-self: flex-end;
+}
+
+/* ========== CALCULATOR CARD ========== */
+.calculator-card {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    color: var(--very-dark-blue);
+    border-radius: 5px;
+    box-shadow: 0 5px 20px 1px lightgray;
+    border-top: 5px solid var(--blue);
+    grid-area: four;
+    
+}
+
+.calculator-card p {
+    margin-top: 5px;
+    margin-bottom: 13%;
+    color: var(--grayish-blue);
+}
+
+.calculator-card img {
+    width: 20%;
+    display: flex;
+    align-self: flex-end;
+}
+
+/* ====== MEDIA QUERIES ====== */
+ @media screen and (max-width: 830px){
+    .cards {
+        grid-template-areas: 
+        "two"
+        "one"
+        "three"
+        "four";
+    }
+
+    .karma-card {
+        margin-bottom: 0px;
+    }
+
+    .supervisor-card {
+        margin-top: 30px;
+    }
+
+    .calculator-card {
+        margin-bottom: 30px;
+    }
+
+    .team-builder-card {
+        margin-top: 0;
+    }
+} 
+
